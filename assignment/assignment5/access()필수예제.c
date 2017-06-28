@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h> 
+#include <unistd.h>
+
+int main(int argc, char *argv[]) {
+	int i;
+
+	if(argc < 2) {
+		fprintf(stderr, "Usage: %s <file1> <file2> .. <fileN>\n", argv[0]);
+		exit(1);
+	}	
+
+	for(i = 1; i < argc; i++) {
+        //파일 존재 여부 판정
+		if(access(argv[i], F_OK) < 0) {
+			fprintf(stderr, "%s doesn't exist.\n", argv[i]);
+			continue;
+		}
+		
+        //읽기 권한 판정
+		if(access(argv[i], R_OK) == 0)
+			printf("User can read %s\n", argv[i]);
+
+        //쓰기 권한 판정
+		if(access(argv[i], W_OK) == 0)
+			printf("User can write %s\n", argv[i]);
+
+        //실행 권한 판정
+		if(access(argv[i], X_OK) == 0)
+			printf("User can execute %s\n", argv[i]);
+	}
+
+	exit(0);
+}
