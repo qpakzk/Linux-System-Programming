@@ -1,9 +1,3 @@
----
-layout: post
-title: "[Linux System Programming] VII. 스레드 라이브러리 - 1. 스레드의 개념"
-tags: Linux_System_Programming Spring_2017
----
-
 # Thread
 - LWP(Light Weight Process, 경량 프로세스)
 - 자원 공유, 독립적인 스케줄링 단위

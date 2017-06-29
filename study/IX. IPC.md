@@ -1,9 +1,3 @@
----
-layout: post
-title: "[Linux System Programming] IX. IPC - 1. pipe(2)"
-tags: Linux_System_Programming Spring_2017
----
-
 # UNIX 통신
 
 - 단방향 통신 : pipe
