@@ -1,9 +1,9 @@
 #include <stdarg.h>
 #include <unistd.h>
-#include "hsw_string.h"
-#include "hsw_stdio.h"
+#include "my_string.h"
+#include "my_stdio.h"
 
-void hsw_itos(int n, char *buf, int base) {
+void my_itos(int n, char *buf, int base) {
 	int i = 0, j;
 	int dividend, quotient, remainder;
 	char temp;
@@ -33,7 +33,7 @@ void hsw_itos(int n, char *buf, int base) {
 	}
 }
 
-int hsw_printf(const char *format, ...) {
+int my_printf(const char *format, ...) {
 	int len = 0;
 	const char *fp = format;
 	va_list vl;
@@ -50,7 +50,7 @@ int hsw_printf(const char *format, ...) {
 			fp++;
 			if(*fp == 'd') {//decimal
 				n = va_arg(vl, int);
-				hsw_itos(n, number, 10);
+				my_itos(n, number, 10);
 				while(*np) {
 					len += write(1, (char *)np, sizeof(char));	
 					np++;
@@ -58,7 +58,7 @@ int hsw_printf(const char *format, ...) {
 			}
 			else if(*fp == 's') {
 				str = va_arg(vl, char *);
-				len += write(1, str, hsw_strlen(str));	
+				len += write(1, str, my_strlen(str));
 			}
 			else if(*fp == 'c') {
 				ch = va_arg(vl, int);

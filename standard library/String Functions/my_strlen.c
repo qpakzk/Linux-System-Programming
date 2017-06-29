@@ -1,6 +1,6 @@
-#include "hsw_string.h"
+#include "my_string.h"
 
-int hsw_strlen(char *str) {
+int my_strlen(char *str) {
 	int len = 0;
 
 	while(*str) {
