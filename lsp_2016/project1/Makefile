@@ -17,4 +17,5 @@ debug : src include
 	$(CC) $(SRC) $(OPT) $(DEBUG_OPT)
 
 clear : output
-	rm ./output/$(FILENAME)
+	rm -rf ./include/*.gch	
+	rm -rf ./output/$(FILENAME)
