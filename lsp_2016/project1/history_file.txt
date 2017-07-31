@@ -1,0 +1,7 @@
+ls -al
+ls -al
+ls -al
+ls -al
+ls -al
+ls -al
+ls -l -l -l -l -l
