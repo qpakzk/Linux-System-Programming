@@ -217,6 +217,7 @@ void exec_history(void) {
 }
 
 void exec_history_c(char cmd_record[][CMD_MAX]) {
+	struct ssu_history_c record_count[TOTAL_SIZE];
 
 }
 
