@@ -1,7 +1,6 @@
+ls
+ls
 ls -al
-ls -al
-ls -al
-ls -al
-ls -al
-ls -al
-ls -l -l -l -l -l
+ls -l -l -l -l
+history
+pwd
